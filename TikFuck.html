@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikFuck - Conteúdo Adulto</title>
+    <meta name="description" content="Plataforma de vídeos curtos para conteúdo adulto">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="age-verification" id="ageVerification">
+        <div class="verification-box">
+            <h2>Verificação de Idade</h2>
+            <p>Este site contém conteúdo adulto. Você deve ter 18 anos ou mais para acessar.</p>
+            <div class="buttons">
+                <button id="confirmAge">Tenho 18 anos ou mais</button>
+                <button id="denyAge">Sair</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+    <div class="app-container" id="appContainer">
+        <header class="app-header">
+            <div class="logo">
+                <span>Tik</span><span class="logo-tok">Fuck</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar criadores, tags...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <button class="upload-btn" id="uploadBtn">
+                    <i class="fas fa-plus"></i> <span>Upload</span>
+                </button>
+                <div class="user-avatar">
+                    <img src="assets/icons/default-avatar.png" alt="Usuário">
+                </div>
+            </div>
+        </header>
+
+        <main class="video-feed">
+            <!-- Video 1 -->
+            <div class="video-container">
+                <video class="video-player" loop>
+                    <source src="#" type="video/mp4">
+                    Seu navegador não suporta vídeos HTML5.
+                </video>
+                <div class="video-info">
+                    <div class="creator-info">
+                        <img src="assets/icons/default-avatar.png" alt="Criador" class="creator-avatar">
+                        <span class="creator-name">@criador1</span>
+                        <button class="follow-btn">Seguir</button>
+                    </div>
+                    <p class="video-description">Descrição do vídeo #1 #tag1 #tag2</p>
+                </div>
+                <div class="video-actions">
+                    <button class="action-btn like-btn">
+                        <i class="fas fa-heart"></i>
+                        <span>24.5K</span>
+                    </button>
+                    <button class="action-btn comment-btn">
+                        <i class="fas fa-comment"></i>
+                        <span>1.2K</span>
+                    </button>
+                    <button class="action-btn share-btn">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Compartilhar</span>
+                    </button>
+                    <button class="action-btn bookmark-btn">
+                        <i class="fas fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video-container">
+                <video class="video-player" loop>
+                    <source src="#" type="video/mp4">
+                    Seu navegador não suporta vídeos HTML5.
+                </video>
+                <div class="video-info">
+                    <div class="creator-info">
+                        <img src="assets/icons/default-avatar.png" alt="Criador" class="creator-avatar">
+                        <span class="creator-name">@criador2</span>
+                        <button class="follow-btn">Seguir</button>
+                    </div>
+                    <p class="video-description">Descrição do vídeo #2 #tag3 #tag4</p>
+                </div>
+                <div class="video-actions">
+                    <button class="action-btn like-btn">
+                        <i class="fas fa-heart"></i>
+                        <span>18.3K</span>
+                    </button>
+                    <button class="action-btn comment-btn">
+                        <i class="fas fa-comment"></i>
+                        <span>856</span>
+                    </button>
+                    <button class="action-btn share-btn">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Compartilhar</span>
+                    </button>
+                    <button class="action-btn bookmark-btn">
+                        <i class="fas fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Início</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-compass"></i>
+                <span>Explorar</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-plus-circle"></i>
+                <span>Criar</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-inbox"></i>
+                <span>Mensagens</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Perfil</span>
+            </a>
+        </nav>
+
+        <!-- Modal de Upload -->
+        <div class="upload-modal" id="uploadModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Enviar Novo Vídeo</h3>
+                    <button class="close-modal" id="closeModal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="upload-area" id="uploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Arraste e solte seu vídeo aqui</p>
+                        <span>ou</span>
+                        <button class="browse-btn">Selecionar Arquivo</button>
+                        <input type="file" id="fileInput" accept="video/*" style="display: none;">
+                    </div>
+                    <div class="video-info-form">
+                        <div class="form-group">
+                            <label for="videoTitle">Título</label>
+                            <input type="text" id="videoTitle" placeholder="Dê um título ao seu vídeo">
+                        </div>
+                        <div class="form-group">
+                            <label for="videoDescription">Descrição</label>
+                            <textarea id="videoDescription" placeholder="Adicione uma descrição e tags..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="videoTags">Tags (separadas por vírgula)</label>
+                            <input type="text" id="videoTags" placeholder="ex: #adulto, #sexy, #onlyfans">
+                        </div>
+                        <div class="form-group">
+                            <label for="videoPrivacy">Privacidade</label>
+                            <select id="videoPrivacy">
+                                <option value="public">Público</option>
+                                <option value="private">Privado</option>
+                                <option value="subscribers">Apenas Assinantes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="cancel-btn">Cancelar</button>
+                    <button class="upload-submit-btn" id="uploadSubmitBtn">Publicar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
